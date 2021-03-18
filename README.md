@@ -4,11 +4,14 @@ SP opdracht 3
 Naam: Sjoerd Beetsma
 Student nr: 1789293
 Opdracht: 3. Business rules voor Recommendation Engine
+Main bestand: TeamV1A1/SP Sjoerd.py
+Bestand wat ook functies bevat van deze opdracht: TeamV1A1/PostgresDAO.py
 
 Gebruik het progamma als volgt:
-Installeer de datastructuur van docent Nick (niet volledig inbegrepen vanwege file size limit)
-Open de map TeamV1A1 (Prongelijk zelfde map naam als waar PostresDAO instond)
-Edit het bestand postgresDAO.py zodat bovenaan in dit script de juiste DB credentials hebben
+
+1. Installeer de datastructuur van docent Nick (niet volledig inbegrepen vanwege file size limit)
+2. Open de map TeamV1A1 (Prongelijk zelfde map naam als waar PostresDAO instond)
+3. Edit het bestand postgresDAO.py zodat bovenaan in dit script de juiste DB credentials hebben
 Nu is het bestand van de opdracht 'SP 3 Sjoerd.py' klaar voor gebruik.
 
 2 functies specifiek gemaakt voor opdracht 3 staan in PostgresDAO om de functies die queries constructen gescheiden te houden.
