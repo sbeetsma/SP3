@@ -170,7 +170,7 @@ def construct_query_where_and(_select, _from, _where):
         _from: from where ex: products
         _where: list of attributes(names not values).
     returns:
-        query: ex multiple attributes: SELECT id FROM products WHERE category = %s and targetaudience = %s"""
+        query: ex multiple attributes: SELECT id FROM products WHERE category = %s or targetaudience = %s"""
 
     query = f"SELECT {_select} FROM {_from} WHERE "
     # for each attribute add to the query "attribute = %s or "
