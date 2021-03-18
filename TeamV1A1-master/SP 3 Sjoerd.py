@@ -170,10 +170,10 @@ def start_recommendation(recommendation_rule, db, id_list):
     # recommendation based on content filtering 1
     if recommendation_rule == 'content_1':
        return pull_recommendation(db, id_list, 'category, targetaudience', recommendation_rule, 'products')
-    
+
     # recommendation based on content filtering rule 2
     elif recommendation_rule == 'content_2':
-       return pull_recommendation(db, id_list, 'msrp, targetaudience', recommendation_rule, 'products')
+       return pull_recommendation(db, id_list, 'brand, targetaudience', recommendation_rule, 'products')
 
     # recommendation based on collaborative filtering 1
     elif recommendation_rule == 'collab_1':
@@ -188,7 +188,7 @@ def start_recommendation(recommendation_rule, db, id_list):
 # Based on content filter_1
 start_fill('content', PostgresDAO.db, 'category, targetaudience', 'content_1', 'category VARCHAR, targetaudience VARCHAR,')
 # Based on content filter_2
-start_fill('content', PostgresDAO.db, 'msrp, targetaudience', 'content_2', 'msrp INTEGER, targetaudience VARCHAR,')
+start_fill('content', PostgresDAO.db, 'brand, targetaudience', 'content_2', 'brand VARCHAR, targetaudience VARCHAR,')
 # COLLAB
 # Based on collab filter_1
 start_fill('collab', PostgresDAO.db, 'segment', 'collab_1', 'segment VARCHAR, ')
@@ -197,10 +197,10 @@ start_fill('collab', PostgresDAO.db, 'segment', 'collab_1', 'segment VARCHAR, ')
 
 # CONTENT
 # Based on content_1 rule
-start_recommendation('content_1', PostgresDAO.db, ['7225', '9196'])
+print(start_recommendation('content_1', PostgresDAO.db, ['7225', '9196']))
 #Based on content_2 rule
-start_recommendation('content_2', PostgresDAO.db, ['7225', '9196'])
+print(start_recommendation('content_2', PostgresDAO.db, ['9196']))
 
 # COLLAB
 # Based on collab_1 rule
-start_recommendation('collab_1', PostgresDAO.db, ['5c0cfab75e0e02000111edf2', '5c0cfaaf5e0e02000111ede9'])
+print(start_recommendation('collab_1', PostgresDAO.db, ['5c0cfab75e0e02000111edf2', '5c0cfaaf5e0e02000111ede9']))
