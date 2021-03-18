@@ -15,7 +15,7 @@ def attribute_combinations(db, attributes, location):
 
 def content_filter_fill(db, attributes, table, attributes_datatypes):
     """Function to fill a table in a database based on a content filter rule
-    the rule will choose recommendations based on if given product attribute(s) are equal
+    the rule will choose recommendations based on if atleast one given product attribute(s) are equal
     for example the attribute category and targetaudience
     args:
         db: database object to fill the recommendation rule table. db is a object from PostgresDAO
@@ -62,7 +62,7 @@ def content_filter_fill(db, attributes, table, attributes_datatypes):
 
 def collaborative_filter_fill(db, attributes, table, attributes_datatypes):
     """Function to fill a table in a database based on a collaborative filter rule
-    the rule will choose recommendations based on if given profile attribute(s) are equal
+    the rule will choose recommendations based on if atleast one given profile attribute(s) are equal
     for example the attribute segment. multiple attributes are possible
     args:
         db: database object where to fill the recommendation rule table. db is a object from PostgresDAO
@@ -199,7 +199,7 @@ start_fill('collab', PostgresDAO.db, 'segment', 'collab_1', 'segment VARCHAR, ')
 # Based on content_1 rule
 print(start_recommendation('content_1', PostgresDAO.db, ['7225', '9196']))
 #Based on content_2 rule
-print(start_recommendation('content_2', PostgresDAO.db, ['9196']))
+print(start_recommendation('content_2', PostgresDAO.db, ['7225', '9196']))
 
 # COLLAB
 # Based on collab_1 rule
